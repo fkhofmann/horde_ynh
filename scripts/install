@@ -128,6 +128,7 @@ $pear_cmd install horde/horde_role
 
 $pear_cmd config-set horde_dir "$final_path/horde"
 $pear_cmd install -a -B horde/webmail $optionnal_apps_list
+$pear_cmd install horde/Horde_ActiveSync
 
 PHP_PEAR_SYSCONF_DIR=$final_path ../conf/config_horde.exp "$final_path" "$db_name" "$db_user" "$db_pwd" "$admin"
 secret_key=$(grep 'secret_key' "$final_path/horde/config/conf.php" | cut -d"'" -f4)
